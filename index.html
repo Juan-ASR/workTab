@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73cBGXgAcR_gEAY-dpuRxl_slwflwjbMhNw&s" alt="logo">
+            <h1>Name</h1>
+        </div>
+
+        <div class="prof">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s" alt="">
+            <ul>
+                <li>Settings</li>
+                <li>Leave</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="logIn-sect">
+                <h2>Log In</h2>
+                <form id="logForm" class="log">
+                    <label>
+                        <span>Email</span>
+                        <input type="email" id="inputE">
+                    </label>
+                    <label>
+                        <span>Password</span>
+                        <input type="password" id="inputP">
+                    </label>
+
+                    <button type="submit">LogIn</button>
+                </form>
+
+                <p class="errorP"></p>
+                <a href="#" id="linkRegis" class="aR">Register</a>
+            </section>
+
+            <section id="regSect">
+                <h2>Register</h2>
+                <form id="regForm" class="reg">
+                    <label>
+                        <span>Email</span>
+                        <input type="email" id="inputE">
+                    </label>
+
+                    <label>
+                        <span>Password</span>
+                        <input type="password" id="inputP">
+                    </label>
+
+                    <label>
+                        <span>Password</span>
+                        <input type="password" id="inputP">
+                    </label>
+
+                    <label>
+                        <span>Password</span>
+                        <input type="password" id="inputP">
+                    </label>
+
+                    <label>
+                        <span>Password</span>
+                        <input type="password" id="inputP">
+                    </label>
+
+                    <button type="submit">Register</button>
+                </form>
+
+                <p class="errorP"></p>
+                <a href="#" id="goToLog" class="logA">Log In</a>
+            </section>
+
+            <section id="profilePic" class="pfp">
+                <h2>Your Profile</h2>
+                <form> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s" alt="">
+                    <button type="button" id="btnFoto" class="btnF">Change Photo</button>
+                    <div class="select">
+                        <button type="button" id="selectBTN">Save</button>
+                        <button type="button" id="selectBTN">Discard</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
