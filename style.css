@@ -1,6 +1,271 @@
+:root{
+    --colorF: #bdbcbc;
+    --colorH: #222831;
+    --colorH2: #31363F;
+    --colorBTN: #76ABAE;
+    --altColor: #485576;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: poppins;
+    text-decoration: none;
+}
+
+main{
+    background-color: var(--colorF);
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* INICIO HEADER */
+
+header{
+    background-color: var(--colorH);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: var(--colorBTN);
+    height: 15vh;
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+header .logo img{
+    width: 110px;
+    height: 12vh;
+}
+
+header .prof ul{
+    display: none;
+}
+
+header .prof img{
+    height: 80px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* FIN HEADER */
+
+.container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* INICIO LOG IN */
+
+.logS{
+    background-color: var(--colorH2);
+    color: var(--colorBTN);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.log{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+}
+
+.log label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 3px;
+}
+
+.log input{
+    width: 20vw;
+    height: 4vh;
+    border: none;
+    background-color: var(--colorF);
+    border-radius: 8px;
+    outline: none;
+}
+
+.log button{
+    width: 15vw;
+    height: 5vh;
+    border: none;
+    background-color: var(--colorBTN);
+    color: var(--colorH2);
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.logS a{
+    color: var(--colorBTN);
+    font-size: 1vw;
+}
+
+.logS a:hover{
+    text-decoration: underline;
+}
+
+/* FIN LOGIN */
+
+.regS{
+    background-color: var(--colorH2);
+    color: var(--colorBTN);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.reg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+}
+
+.reg label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 3px;
+}
+
+.reg input{
+    width: 20vw;
+    height: 4vh;
+    border: none;
+    background-color: var(--colorF);
+    border-radius: 8px;
+    outline: none;
+}
+
+.reg button{
+    width: 15vw;
+    height: 5vh;
+    border: none;
+    background-color: var(--colorBTN);
+    color: var(--colorH2);
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.regS a{
+    color: var(--colorBTN);
+    font-size: 1vw;
+}
+
+.regS a:hover{
+    text-decoration: underline;
+}
+
+/* FIN REGISTER */
+
+/* INICIO PROFILE */
+
+.pfp{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 10px;
+    background-color: var(--colorH2);
+    color: var(--colorBTN);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pfp h2{
+    font-size: 2vw;
+}
+
+.pfp form img{
+    border-radius: 100%;
+}
+
+form #btnFoto{
+    width: 18vw;
+    height: 4vh;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--colorBTN);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+.select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+form .select button{
+    width: 8vw;
+    height: 4vh;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--colorBTN);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+form button:active{
+    background-color: var(--altColor);
+}
+
+#btnFoto:active{
+    background-color: var(--altColor);
+}
+
+/* FIN PERFIL INICIO RESPONSIVE */
+
+@media screen and (max-aspect-ratio: 4/3){
+    
 }
