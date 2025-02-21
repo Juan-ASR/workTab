@@ -12,15 +12,23 @@
     box-sizing: border-box;
     font-family: poppins;
     text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: var(--colorF);
 }
 
 main{
-    background-color: var(--colorF);
     height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.errorP{
+    color: red;
 }
 
 /* INICIO HEADER */
@@ -34,6 +42,8 @@ header{
     padding: 20px;
     color: var(--colorBTN);
     height: 15vh;
+    position: relative;
+    bottom: 150px;
 }
 
 header .logo{
@@ -45,18 +55,57 @@ header .logo{
 }
 
 header .logo img{
-    width: 110px;
+    width: 100px;
     height: 12vh;
 }
 
-header .prof ul{
-    display: none;
+.prof{
+    position: relative;
 }
+
+.prof ul{
+    position: absolute;
+    background-color: var(--colorH2);
+    color: var(--colorBTN);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    display: none;
+    width: 15vh;
+    border-radius: 10px;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.prof li:nth-child(2){
+    border-top: white 1px solid;
+    width: 100%;
+}
+
+.prof ul{
+    cursor: pointer;
+}
+
+.prof ul li:hover{
+    color: var(--altColor);
+}
+
+.prof:hover ul{
+    display: flex;
+}
+
 
 header .prof img{
     height: 80px;
+    width: 80px;
+    border-radius: 100%;
     border-radius: 12px;
     cursor: pointer;
+    object-fit: cover;
 }
 
 /* FIN HEADER */
@@ -66,6 +115,7 @@ header .prof img{
     gap: 20px;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 /* INICIO LOG IN */
@@ -73,7 +123,7 @@ header .prof img{
 .logS{
     background-color: var(--colorH2);
     color: var(--colorBTN);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -89,7 +139,6 @@ header .prof img{
     justify-content: center;
     align-items: center;
     gap: 25px;
-    padding: 25px;
 }
 
 .log label{
@@ -101,16 +150,17 @@ header .prof img{
 }
 
 .log input{
-    width: 20vw;
+    width: 40vh;
     height: 4vh;
     border: none;
     background-color: var(--colorF);
     border-radius: 8px;
     outline: none;
+    padding: 5px;
 }
 
 .log button{
-    width: 15vw;
+    width: 35vh;
     height: 5vh;
     border: none;
     background-color: var(--colorBTN);
@@ -121,9 +171,13 @@ header .prof img{
     cursor: pointer;
 }
 
+.log button:active{
+    background-color: var(--altColor);
+}
+
 .logS a{
     color: var(--colorBTN);
-    font-size: 1vw;
+    font-size: 2vh;
 }
 
 .logS a:hover{
@@ -135,14 +189,19 @@ header .prof img{
 .regS{
     background-color: var(--colorH2);
     color: var(--colorBTN);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 10px;
-    padding: 25px;
+    padding: 15px;
     border-radius: 15px;
+    width: 50vh;
+}
+
+.regS form{
+    width: 100%;
 }
 
 .reg{
@@ -151,7 +210,6 @@ header .prof img{
     justify-content: center;
     align-items: center;
     gap: 25px;
-    padding: 25px;
 }
 
 .reg label{
@@ -160,11 +218,12 @@ header .prof img{
     justify-content: center;
     text-align: left;
     gap: 3px;
+    width: 100%;
 }
 
 .reg input{
-    width: 20vw;
     height: 4vh;
+    width: 100%;
     border: none;
     background-color: var(--colorF);
     border-radius: 8px;
@@ -172,7 +231,7 @@ header .prof img{
 }
 
 .reg button{
-    width: 15vw;
+    width: 80%;
     height: 5vh;
     border: none;
     background-color: var(--colorBTN);
@@ -183,9 +242,13 @@ header .prof img{
     cursor: pointer;
 }
 
+.reg button:active{
+    background-color: var(--altColor);
+}
+
 .regS a{
     color: var(--colorBTN);
-    font-size: 1vw;
+    font-size: 2vh;
 }
 
 .regS a:hover{
@@ -197,7 +260,7 @@ header .prof img{
 /* INICIO PROFILE */
 
 .pfp{
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 25px;
     gap: 10px;
@@ -209,10 +272,11 @@ header .prof img{
     border-radius: 15px;
 }
 
-form{
+.pfp form{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -224,17 +288,20 @@ form{
 
 .pfp form img{
     border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
-form #btnFoto{
-    width: 18vw;
+form #btnCh{
+    width: 25vh;
     height: 4vh;
     border-radius: 10px;
     border: none;
     background-color: var(--colorBTN);
     cursor: pointer;
     font-weight: 600;
-    font-size: 1vw;
+    font-size: 2vh;
 }
 
 .select{
@@ -253,19 +320,89 @@ form .select button{
     background-color: var(--colorBTN);
     cursor: pointer;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 2vh;
 }
 
 form button:active{
     background-color: var(--altColor);
 }
 
-#btnFoto:active{
+#btnCh:active{
     background-color: var(--altColor);
+}
+
+/* ANIMATIONS */
+
+.show-card {
+    animation: show-card 0.5s normal backwards;
+}
+
+.hide-card {
+    animation: hide-card 0.5s normal forwards;
+}
+
+.show-h {
+    animation: show-h 0.5s normal backwards;
+}
+
+.hide-h {
+    animation: hide-h 0.5s normal forwards;
+}
+
+@keyframes hide-card {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+}
+
+@keyframes show-card {
+    from {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes show-h {
+    0% {
+            -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+            opacity: 0;
+    }
+    100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+    }
+}
+
+@keyframes hide-h {
+    0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+    }
+    100% {
+            -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+            opacity: 0;
+    }
 }
 
 /* FIN PERFIL INICIO RESPONSIVE */
 
 @media screen and (max-aspect-ratio: 4/3){
-    
+    header h1{
+        display: none;
+    }
 }

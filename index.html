@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73cBGXgAcR_gEAY-dpuRxl_slwflwjbMhNw&s" alt="logo">
 
@@ -16,10 +16,10 @@
         </div>
 
         <div class="prof">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s" alt="" id="profImg">
             <ul>
-                <li>Settings</li>
-                <li>Leave</li>
+                <li id="settingsLI">Settings</li>
+                <li id="leaveLI">Leave</li>
             </ul>
         </div>
     </header>
@@ -45,32 +45,39 @@
                 <a href="#" id="linkRegis" class="aR">Register</a>
             </section>
 
-            <!-- <section id="regSect" class="regS">
+            <!-- FIN  LOGIN INICO REGIS -->
+
+            <section id="regSect" class="regS">
                 <h2>Register</h2>
                 <form id="regForm" class="reg">
                     <label>
                         <span>Email</span>
-                        <input type="email" id="inputEReg">
+                        <input type="email" id="inputEReg" required>
                     </label>
-
+                    
                     <label>
                         <span>Name</span>
-                        <input type="password" id="inputNReg">
+                        <input type="text" id="inputNReg" required>
                     </label>
 
                     <label>
                         <span>Last Name</span>
-                        <input type="password" id="inputLnReg">
+                        <input type="text" id="inputLnReg" required>
+                    </label>
+
+                    <label>
+                        <span>Age</span>
+                        <input type="number" id="inputAgeReg" required>
                     </label>
 
                     <label>
                         <span>Password</span>
-                        <input type="password" id="inputPReg">
+                        <input type="password" id="inputPReg" required>
                     </label>
 
                     <label>
                         <span>Confirm Password</span>
-                        <input type="password" id="inputCpReg">
+                        <input type="password" id="inputCpReg" required>
                     </label>
 
                     <button type="submit">Register</button>
@@ -78,22 +85,24 @@
 
                 <p class="errorP"></p>
                 <a href="#" id="goToLog" class="logA">Log In</a>
-            </section> -->
+            </section>
 
-            <!-- <section id="profileSec" class="pfp">
+            <!-- FIN REGIS INICO PROFILE -->
+
+            <section id="profileSect" class="pfp">
                 <h2>Your Profile</h2>
-                <form> 
+                <form id="profileForm" class="prof"> 
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s" alt="">
-                    <button type="button" id="btnFoto" class="btnF">Change Photo</button>
+                    <button type="button" id="btnCh" class="btnF">Change Photo</button>
                     <div class="select">
-                        <button type="button" id="selectBTN">Save</button>
-                        <button type="button" id="selectBTN">Discard</button>
+                        <button type="button" id="saveBTN">Save</button>
+                        <button type="button" id="cancelBTN">Discard</button>
                     </div>
                 </form>
-            </section> -->
+            </section>
         </div>
     </main>
 
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js" defer></script>
 </body>
 </html>
